@@ -19,9 +19,7 @@ func Contains(arr1 []string, arr2 []string, char string) bool {
 			inSecond = true
 		}
 	}
-	inBoth := inFirst && inSecond
-
-	return inBoth
+	return inFirst && inSecond
 }
 
 func alphaIndex(alphabet [26]string, char string) int {

@@ -9,7 +9,7 @@ import (
 func Score(eMove string, myMove string) int {
 	score := 0
 	switch eMove {
-	case "A": // rock
+	case "A": // 🗿
 		if myMove == "X" {
 			score = 3
 		}
@@ -19,7 +19,7 @@ func Score(eMove string, myMove string) int {
 		if myMove == "Z" {
 			score = 6 + 2
 		}
-	case "B": // paper
+	case "B": // 📃
 		if myMove == "X" {
 			score = 1
 		}
@@ -29,7 +29,7 @@ func Score(eMove string, myMove string) int {
 		if myMove == "Z" {
 			score = 6 + 3
 		}
-	case "C": //sciccors
+	case "C": // ✂️
 		if myMove == "X" {
 			score = 2
 		}
@@ -46,20 +46,13 @@ func Score(eMove string, myMove string) int {
 
 func Day2() int {
 	reader := bufio.NewScanner(os.Stdin)
-
 	score := 0
-
 	for reader.Scan() {
 		line := reader.Text()
 		moves := strings.Split(line, " ")
-
 		eMove := moves[0]
 		myMove := moves[1]
-
 		score += Score(eMove, myMove)
-
 	}
-
 	return score
-
 }

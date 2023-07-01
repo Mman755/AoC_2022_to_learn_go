@@ -14,7 +14,6 @@ func Contained(fLower int, fUpper int, sLower int, sUpper int) bool {
 	if sLower <= fLower && sUpper >= fUpper {
 		return true
 	}
-
 	return false
 }
 
@@ -22,16 +21,11 @@ func P2Contained(fLower int, fUpper int, sLower int, sUpper int) bool {
 	if fLower <= sUpper && sLower <= fUpper {
 		return true
 	}
-
 	return false
 }
-
-// 4-9 and 5-6
-
 func Day4() int {
 	reader := bufio.NewScanner(os.Stdin)
 	count := 0
-
 	for reader.Scan() {
 		line := reader.Text()
 		var stringInitial = strings.Split(line, ",")
@@ -47,8 +41,6 @@ func Day4() int {
 		if P2Contained(bounds[0], bounds[1], bounds[2], bounds[3]) {
 			count += 1
 		}
-
 	}
-
 	return count
 }
