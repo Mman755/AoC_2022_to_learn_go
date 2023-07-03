@@ -16,9 +16,9 @@ import (
 - From the above find which directories have a size of at most x
 */
 
-var MAX_DIR_SIZE = 100000
-var TOTAL_DIR_CAP = 70000000
-var MIN_SPACE_REQ = 30000000
+const MAX_DIR_SIZE = 100000
+const TOTAL_DIR_CAP = 70000000
+const MIN_SPACE_REQ = 30000000
 
 func Contains(line []string, lookFor string) bool {
 	for i := 0; i < len(line); i++ {
